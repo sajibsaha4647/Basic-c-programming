@@ -237,13 +237,14 @@ void getReverseNumber()
 {
 
     int number = 123;
-    int first, middle, last, reverse;
+    int reverse = 0;
 
-    first = number / 100;
-    middle = (number / 10) % 10;
-    last = number % 10;
-
-    reverse = last * 100 + middle * 10 + first;
+    while (number != 0)
+    {
+        int lastDigit = number % 10;        // getting last one
+        reverse = reverse * 10 + lastDigit; // add it to reverse
+        number = number / 10;               // remove the last one
+    }
 
     printf("Reverse = %d\n", reverse);
 }
@@ -331,6 +332,78 @@ void getGCDLMC()
     printf("here was the lcm %d\n", lcm);
 }
 
+// Sum of Digits
+int sumOfDigits(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+
+    return n % 10 + sumOfDigits(n / 10);
+}
+
+// Reverse a Number using Recursion
+
+int reverseANumber(int n, int reverse)
+{
+
+    if (n == 0)
+    {
+        return reverse;
+    }
+
+    int digit = n % 10;
+
+    reverse = reverse * 10 + digit;
+
+    return reverseANumber(n / 10, reverse);
+}
+
+// getting factorial
+
+int getFactorial(int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    return n * getFactorial(n - 1);
+}
+
+int fibonacciSeries()
+{
+
+    int number = 5;
+    int first = 0;
+    int second = 1;
+
+    for (int i = 0; i <= 5; i++)
+    {
+
+        printf("%d", first);
+        int next = first + second;
+        first = second;
+        second = next;
+    }
+}
+
+int recursionFibonacci(int n)
+{
+
+    if (n == 0)
+    {
+        return 0;
+    }
+
+    if (n == 1)
+    {
+        return 1;
+    }
+
+    return recursionFibonacci(n - 1) + recursionFibonacci(n - 2);
+}
+
 int main()
 {
     printf("hellow world \n");
@@ -356,8 +429,27 @@ int main()
 
     // getcountDigitOfNumber();
 
-    getGCDLMC();
+    // getGCDLMC();
     // getCalculationOfDigits();
+
+    // int number = 12345;
+
+    // int result = reverseNumber(number, 0);
+
+    // printf("Reversed: %d\n", result);
+
+    // getReverseNumber();
+
+    // printf("Factorial = %d\n", getFactorial(5));
+
+    // fibonacciSeries();
+
+    int n = 10;
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", recursionFibonacci(i));
+    }
 
     return 0;
 }
