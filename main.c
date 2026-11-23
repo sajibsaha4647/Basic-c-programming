@@ -265,147 +265,15 @@ void declareDynamicsized()
     {
         printf("Enter number %d: ", number2[i]);
     }
+
+
 }
 
-// Count digits of a number
-void getcountDigitOfNumber()
-{
-    int n = 12345;
-    int count = 1;
-    if (n == 0)
-    {
-        count = 1;
-    }
-    else
-    {
-        while (n != 0)
-        {
-            n = n / 10;
-            count++;
-            printf("Total digits list: %d\n", n);
-        }
-    }
-    printf("Total digits: %d\n", count);
-}
 
-// Calculate sum of digits
 
-void getCalculationOfDigits()
-{
-    int number = 1234;
-    int sum = 0;
-    if (number < 0)
-    {
-        number = -number;
-    }
 
-    while (number != 0)
-    {
-        int digit = number % 10; // getting last digit
-        sum = sum + digit;       // sum of digits
-        number = number / 10;    // remove last digit
-    }
 
-    printf("Sum of digits: %d\n", sum);
-}
-
-// Get GCD and LMC
-void getGCDLMC()
-{
-    int a = 24;
-    int b = 36;
-
-    int x = a; // save original values
-    int y = b;
-
-    while (y != 0)
-    {
-        int temp = y;
-        y = x % y;
-        x = temp;
-    }
-
-    int GCD = x;
-    int lcm = (a / GCD) * b; // a and b still hold 24 and 36
-
-    printf("here was the GCD %d\n", GCD);
-    printf("here was the lcm %d\n", lcm);
-}
-
-// Sum of Digits
-int sumOfDigits(int n)
-{
-    if (n == 0)
-    {
-        return 0;
-    }
-
-    return n % 10 + sumOfDigits(n / 10);
-}
-
-// Reverse a Number using Recursion
-
-int reverseANumber(int n, int reverse)
-{
-
-    if (n == 0)
-    {
-        return reverse;
-    }
-
-    int digit = n % 10;
-
-    reverse = reverse * 10 + digit;
-
-    return reverseANumber(n / 10, reverse);
-}
-
-// getting factorial
-
-int getFactorial(int n)
-{
-    if (n == 0)
-    {
-        return 1;
-    }
-    return n * getFactorial(n - 1);
-}
-
-int fibonacciSeries()
-{
-
-    int number = 5;
-    int first = 0;
-    int second = 1;
-
-    for (int i = 0; i <= 5; i++)
-    {
-
-        printf("%d", first);
-        int next = first + second;
-        first = second;
-        second = next;
-    }
-}
-
-int recursionFibonacci(int n)
-{
-
-    if (n == 0)
-    {
-        return 0;
-    }
-
-    if (n == 1)
-    {
-        return 1;
-    }
-
-    return recursionFibonacci(n - 1) + recursionFibonacci(n - 2);
-}
-
-int main()
-{
+int main(){
     printf("hellow world \n");
     // add();
     // variableTypes();
@@ -425,7 +293,7 @@ int main()
 
     // getReverseNumber();
 
-    // declareDynamicsized();
+    declareDynamicsized();
 
     // getcountDigitOfNumber();
 
