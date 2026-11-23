@@ -269,6 +269,148 @@ void declareDynamicsized()
 
 }
 
+// Array and Searching
+
+void getLargestAndSmall(){
+    int arr[] = {10, 25, 5, 40, 15};
+    int n = 5;
+
+    int largest = arr[0];
+    int smallest = arr[0];
+
+    for(int i = 0; i<n;i++){
+        if(arr[i]<smallest){
+            smallest = arr[i];
+        }
+
+        if(arr[i]>largest){
+            largest = arr[i]; 
+        }
+    }
+
+     printf("Largest = %d\n", largest);
+    printf("Smallest = %d\n", smallest);
+}
+
+
+
+// Sorting an array swaping
+
+void arraySmallToBigger(){
+    int arr[] = {10, 25, 5, 40, 15};
+    int n = 5;
+    for(int i = 0; i < n; i++){
+       for(int j = i+1; j<n; j++ ){
+            if(arr[j]<arr[i]){
+                int temp  = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+
+       }
+    }
+
+    printf("Sorted array: ");
+    for(int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+
+}
+
+// Sorting an array swaping
+void arrayBiggerToSmall(){
+    int arr[] = {10, 25, 5, 40, 15};
+    int n = 5;
+    for(int i = 0; i < n; i++){
+       for(int j = i+1; j<n; j++ ){
+            if(arr[j]>arr[i]){
+                int temp  = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            
+       }
+    }
+
+
+    printf("Sorted array: ");
+    for(int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+
+}
+
+// Reverse an array
+
+void reverseAnArray(){
+    int arr[] = {10, 25, 5, 40, 15};
+    int n = 5;
+
+    int start = 0;
+    int end  = n-1;
+
+    while (start < end)
+    {
+        /* code */
+    }
+    
+}
+
+
+// Array insertion and deletion
+
+// Linear Search
+
+// Binary Search
+
+// Sorting Algorithms
+
+// Selection Sort
+
+// Insertion Sort
+
+
+// Merge Sort
+
+
+// Quick Sort
+
+// Stack implementation using Array
+
+
+// Stack implementation using Linked List
+
+
+// Queue implementation using Array
+
+
+
+
+// Circular Queue implementation
+
+
+
+
+// Singly Linked List insertion and display
+
+
+
+// Singly Linked List deletion and searching
+
+
+// Binary Search Tree (BST) insertion and searching
+
+
+// Tree Traversal
+
+
+// BFS (Breadth-First Search)
+
+
+// DFS (Depth-First Search)
+
 
 
 
@@ -293,7 +435,7 @@ int main(){
 
     // getReverseNumber();
 
-    declareDynamicsized();
+    // declareDynamicsized();
 
     // getcountDigitOfNumber();
 
@@ -312,12 +454,16 @@ int main(){
 
     // fibonacciSeries();
 
-    int n = 10;
+    // int n = 10;
 
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", recursionFibonacci(i));
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("%d ", recursionFibonacci(i));
+    // }
+
+
+    arraySmallToBigger();
+    arrayBiggerToSmall();
 
     return 0;
 }
